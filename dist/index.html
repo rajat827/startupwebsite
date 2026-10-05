@@ -8,7 +8,7 @@
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230A0E20'/%3E%3Ctext x='7' y='24' font-family='Arial' font-weight='700' font-size='24' fill='white'%3EB%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Manrope:wght@400;500;600;650;700;750;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css"><script src="app.js" defer></script>
+  <link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="motion.css"><script src="app.js" defer></script><script src="motion.js" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -23,8 +23,8 @@
 <main id="main">
   <section class="hero" aria-labelledby="hero-title">
     <div class="hero-copy">
-      <p class="eyebrow"><span class="short-rule"></span> WHERE BUILDERS MEET.</p>
-      <h1 id="hero-title">That thing<br>you want <br>to <span class="build-word">build.</span><br><span class="start-line">Start here.</span></h1>
+      <p class="eyebrow"><span class="short-rule"></span> BUILDADDA PROGRAMS</p>
+      <h1 id="hero-title"><span class="headline-piece" style="--line:0">That thing</span><br><span class="headline-piece" style="--line:1">you want</span> <br><span class="headline-piece" style="--line:2">to <span class="build-word">build.</span></span><br><span class="start-line headline-piece" style="--line:3">Start here.</span></h1>
       <p class="hero-intro">Two founder journeys. From discovering what to build to turning an idea into a real business.</p>
       <a class="button primary" href="#programs">Find Your Program</a>
       <div class="hero-programs"><a href="#spark"><span>SPARK</span><span>₹10K</span></a><span class="separator"></span><a href="#ignite"><span>IGNITE</span><span>₹20K</span></a></div>
@@ -42,7 +42,7 @@
         <div class="program-top"><span class="eyebrow">THE DISCOVERY JOURNEY</span><span class="program-number">01</span></div>
         <h3>SPARK<span class="title-dot">.</span></h3>
         <p class="program-quote">“I want to build something,<br>but I'm still figuring out what.”</p>
-        <div class="program-content"><p class="program-promise">FIND WHAT<br>TO BUILD.</p><p class="program-description">No idea. Too many ideas. Or one that needs a closer look. Find a business direction worth committing to.</p></div>
+        <div class="program-content"><p class="program-promise">FIND WHAT<br> TO BUILD.</p><p class="program-description">No idea. Too many ideas. Or one that needs a closer look. Find a business direction worth committing to.</p></div>
         <ol class="stages" aria-label="SPARK stages"><li>Explore</li><li>Identify</li><li>Validate</li><li>Decide</li></ol>
         <div class="outcome"><span class="eyebrow">WHAT YOU LEAVE WITH</span><p>A clear business direction<br>and a 90-day action plan.</p></div>
         <div class="program-bottom"><p class="price">₹10,000<span>SPARK PROGRAM</span></p><a href="#journey" class="program-link" data-path="spark">See your journey</a></div>
@@ -51,7 +51,7 @@
         <div class="program-top"><span class="eyebrow">THE BUILDING JOURNEY</span><span class="program-number">02</span></div>
         <h3>IGNITE<span class="title-dot">.</span></h3>
         <p class="program-quote">“I know what<br>I want to build.”</p>
-        <div class="program-content"><p class="program-promise">GO<br>BUILD IT.</p><p class="program-description">An idea or an early startup. Get to work on your product, your first customers, and a business that can grow.</p></div>
+        <div class="program-content"><p class="program-promise">GO<br> BUILD IT.</p><p class="program-description">An idea or an early startup. Get to work on your product, your first customers, and a business that can grow.</p></div>
         <ol class="stages" aria-label="IGNITE stages"><li>Validate</li><li>Build</li><li>Launch</li><li>Grow</li></ol>
         <div class="outcome"><span class="eyebrow">WHAT YOU LEAVE WITH</span><p>Something real<br>people can actually use.</p></div>
         <div class="program-bottom"><p class="price">₹20,000<span>IGNITE PROGRAM</span></p><a href="#journey" class="program-link" data-path="ignite">See your journey</a></div>
@@ -74,4 +74,5 @@
 <dialog id="about-dialog" aria-labelledby="about-title"><button class="dialog-close" aria-label="Close about BuildAdda">×</button><p class="eyebrow">WHERE BUILDERS MEET.</p><h2 id="about-title">An ecosystem<br>for builders.</h2><p>BuildAdda brings together the people, ideas, and resources that help businesses take shape.</p><p>Connect with founders, co-founders, startups, investors, communities, technology, government grants, and new opportunities.</p><a class="button primary" href="#programs" data-close-about>Explore the programs</a></dialog>
 </body>
 </html>
+
 
