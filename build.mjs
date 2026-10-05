@@ -1,0 +1,12 @@
+import {readFileSync,writeFileSync,mkdirSync,readdirSync,cpSync} from 'node:fs';
+import path from 'node:path';
+const types={'.html':'text/html;charset=utf-8','.css':'text/css;charset=utf-8','.js':'text/javascript;charset=utf-8','.png':'image/png','.svg':'image/svg+xml'};
+const assets={};function walk(dir,prefix=''){for(const entry of readdirSync(dir,{withFileTypes:true})){const file=path.join(dir,entry.name),key=prefix+'/'+entry.name;if(entry.isDirectory())walk(file,key);else{const binary=path.extname(file)==='.png';assets[key]={body:readFileSync(file,binary?'base64':'utf8'),type:types[path.extname(file)]||'application/octet-stream',binary};}}}walk('public');
+mkdirSync('dist/server',{recursive:true});mkdirSync('dist/.openai',{recursive:true});
+writeFileSync('dist/server/assets.mjs',`export const assets=${JSON.stringify(assets)};`);
+cpSync('src/worker.mjs','dist/server/index.js');
+writeFileSync('dist/server/api.mjs',readFileSync('src/api.mjs','utf8').replace('../public/application-model.js','./application-model.js'));
+cpSync('public/application-model.js','dist/server/application-model.js');
+cpSync('.openai/hosting.json','dist/.openai/hosting.json');
+cpSync('drizzle','dist/.openai/drizzle',{recursive:true});
+console.log('Built BuildAdda application Worker with',Object.keys(assets).length,'assets.');
