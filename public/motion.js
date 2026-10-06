@@ -19,7 +19,7 @@
     const shell = document.createElement('div'); shell.className = 'stages-shell';
     stages.before(shell); shell.append(stages);
     const flow = document.createElement('span'); flow.className = 'hover-flow'; flow.setAttribute('aria-hidden', 'true');
-    flow.textContent = panel.id === 'spark' ? 'EXPLORE → VALIDATE → DECIDE' : 'VALIDATE → BUILD → LAUNCH';
+    flow.textContent = panel.id === 'spark' ? 'EXPLORE → IDENTIFY → VALIDATE → DECIDE' : 'VALIDATE → BUILD → LAUNCH → GROW';
     shell.append(flow);
   });
   steps.slice(4).forEach(step => step.classList.add('achieved'));

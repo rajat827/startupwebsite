@@ -8,16 +8,16 @@
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230A0E20'/%3E%3Ctext x='7' y='24' font-family='Arial' font-weight='700' font-size='24' fill='white'%3EB%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Manrope:wght@400;500;600;650;700;750;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="motion.css"><script src="app.js" defer></script><script src="motion.js" defer></script>
-</head>
+  <link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="motion.css"><link rel="stylesheet" href="review-v2.css"><script src="app.js" defer></script><script src="motion.js" defer></script>
+<link rel="icon" type="image/png" href="/assets/buildadda-official-mark.png"></head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="header">
-  <a class="brand" href="#" aria-label="BuildAdda home">BuildAdda</a>
+  <a class="brand brand-lockup" href="#" aria-label="BuildAdda home"><img class="brand-mark" src="/assets/buildadda-official-mark.png" alt="" width="35" height="35"><span>BuildAdda</span></a>
   <nav class="nav" id="navigation" aria-label="Main navigation">
     <a href="#programs">Programs</a><a href="#spark">SPARK</a><a href="#ignite">IGNITE</a><button class="text-button" data-about>About</button>
   </nav>
-  <a class="button nav-cta" href="/apply">Start Your Application</a>
+  <a class="button nav-cta" href="#programs">Find Your Program</a>
   <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="navigation"><span></span><span></span></button>
 </header>
 <main id="main">
@@ -25,13 +25,19 @@
     <div class="hero-copy">
       <p class="eyebrow"><span class="short-rule"></span> BUILDADDA PROGRAMS</p>
       <h1 id="hero-title"><span class="headline-piece" style="--line:0">That thing</span><br><span class="headline-piece" style="--line:1">you want</span> <br><span class="headline-piece" style="--line:2">to <span class="build-word">build.</span></span><br><span class="start-line headline-piece" style="--line:3">Start here.</span></h1>
-      <p class="hero-intro">Two founder journeys. From discovering what to build to turning an idea into a real business.</p>
-      <a class="button primary" href="/apply">Start Your Application</a>
-      <div class="hero-programs"><a href="/apply?program=SPARK"><span>SPARK</span><span>₹10K</span></a><span class="separator"></span><a href="/apply?program=IGNITE"><span>IGNITE</span><span>₹20K</span></a></div>
+      <p class="hero-intro">Find your direction with SPARK.<br>Turn your idea into something real with IGNITE.</p>
+      <p class="ecosystem-line">Part of BuildAdda — discover, learn, connect, then build.</p>
+      <a class="button primary" href="#programs">Find Your Program</a>
+      <div class="hero-programs"><a href="/apply?program=SPARK"><span>SPARK</span><span>₹10,000</span></a><span class="separator"></span><a href="/apply?program=IGNITE"><span>IGNITE</span><span>₹20,000</span></a></div>
     </div>
-    <figure class="hero-visual">
-      <img src="assets/founders-editorial.png" alt="Three young Indian builders working together on a laptop and paper prototypes in a sunlit studio" width="1536" height="1024" fetchpriority="high">
-      <figcaption><span>LESS SOMEDAY.<br>MORE DAY ONE.</span><span class="image-index">BUILDADDA<br>PROGRAMS / 01</span></figcaption>
+    <figure class="hero-visual builder-editorial" aria-label="The builder journey" aria-roledescription="carousel">
+      <div class="editorial-photo carousel-track" tabindex="0" aria-label="Builder images. Use left and right arrow keys or swipe.">
+        <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="1 of 4: Make it tangible"><img src="assets/builder-workbench-v3.png" alt="Illustrative scene of a builder sketching and arranging a paper product prototype." width="1122" height="1402" fetchpriority="high" decoding="async"></div>
+        <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="2 of 4: Build with other builders"><img src="assets/founder-collaboration-v4.png" alt="Illustrative scene of two Indian founders discussing a customer journey at a whiteboard." width="1024" height="1280" loading="lazy" decoding="async"></div>
+        <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="3 of 4: Get closer to customers"><img src="assets/customer-feedback-v4.png" alt="Illustrative scene of an entrepreneur getting feedback on a packaging prototype from a shop owner." width="1024" height="1280" loading="lazy" decoding="async"></div>
+        <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="4 of 4: Build for real conditions"><img src="assets/defence-tech-v5.png" alt="Illustrative scene of Indian defence-tech engineers inspecting a rugged field robotics prototype." width="1024" height="1280" loading="lazy" decoding="async"></div>
+      </div>
+      <figcaption><div class="carousel-caption" aria-live="polite" aria-atomic="true"><span class="editorial-kicker">FROM A FIRST THOUGHT TO A FIRST BUILD</span><span class="editorial-title">Make it tangible.</span></div><div class="carousel-controls"><span class="carousel-count" aria-hidden="true">01 / 04</span><button class="carousel-prev" type="button" aria-label="Previous image">←</button><button class="carousel-next" type="button" aria-label="Next image">→</button></div></figcaption>
     </figure>
     <div class="hero-bottom"><span>Ambition is a starting point.</span><span>Let's give it a direction.</span></div>
   </section>
@@ -42,7 +48,7 @@
         <div class="program-top"><span class="eyebrow">THE DISCOVERY JOURNEY</span><span class="program-number">01</span></div>
         <h3>SPARK<span class="title-dot">.</span></h3>
         <p class="program-quote">“I want to build something,<br>but I'm still figuring out what.”</p>
-        <div class="program-content"><p class="program-promise">FIND WHAT<br> TO BUILD.</p><p class="program-description">No idea. Too many ideas. Or one that needs a closer look. Find a business direction worth committing to.</p></div>
+        <div class="program-content"><p class="program-promise">Find what<br> to build.</p><p class="program-description">No idea. Too many ideas. Or one that needs a closer look. Find a business direction worth committing to.</p></div>
         <ol class="stages" aria-label="SPARK stages"><li>Explore</li><li>Identify</li><li>Validate</li><li>Decide</li></ol>
         <div class="outcome"><span class="eyebrow">WHAT YOU LEAVE WITH</span><p>A clear business direction<br>and a 90-day action plan.</p></div>
         <div class="program-bottom"><p class="price">₹10,000<span>SPARK PROGRAM</span></p><a href="/apply?program=SPARK" class="program-link">Apply for SPARK</a></div>
@@ -51,7 +57,7 @@
         <div class="program-top"><span class="eyebrow">THE BUILDING JOURNEY</span><span class="program-number">02</span></div>
         <h3>IGNITE<span class="title-dot">.</span></h3>
         <p class="program-quote">“I know what<br>I want to build.”</p>
-        <div class="program-content"><p class="program-promise">GO<br> BUILD IT.</p><p class="program-description">An idea or an early startup. Get to work on your product, your first customers, and a business that can grow.</p></div>
+        <div class="program-content"><p class="program-promise">Go<br> build it.</p><p class="program-description">An idea or an early startup. Get to work on your product, your first customers, and a business that can grow.</p></div>
         <ol class="stages" aria-label="IGNITE stages"><li>Validate</li><li>Build</li><li>Launch</li><li>Grow</li></ol>
         <div class="outcome"><span class="eyebrow">WHAT YOU LEAVE WITH</span><p>Something real<br>people can actually use.</p></div>
         <div class="program-bottom"><p class="price">₹20,000<span>IGNITE PROGRAM</span></p><a href="/apply?program=IGNITE" class="program-link">Apply for IGNITE</a></div>
@@ -68,12 +74,9 @@
       <li><span class="step-index">05</span><span class="step-node"></span><h3>MVP</h3><p>I built it.</p></li>
       <li><span class="step-index">06</span><span class="step-node"></span><h3>CUSTOMERS</h3><p>Real people. Real value.</p></li>
     </ol>
-    <div class="journey-end"><span>BUILDADDA</span><p>Where builders meet.</p><a href="/apply">Start your application</a></div>
+    <footer class="journey-end"><a class="brand brand-lockup footer-brand" href="#" aria-label="BuildAdda home"><img class="brand-mark" src="/assets/buildadda-official-mark.png" alt="" width="35" height="35"><span>BuildAdda</span></a><p>Where builders meet.</p><a class="footer-cta" href="#programs">Find your starting point</a></footer>
   </section>
 </main>
 <dialog id="about-dialog" aria-labelledby="about-title"><button class="dialog-close" aria-label="Close about BuildAdda">×</button><p class="eyebrow">WHERE BUILDERS MEET.</p><h2 id="about-title">An ecosystem<br>for builders.</h2><p>BuildAdda brings together the people, ideas, and resources that help businesses take shape.</p><p>Connect with founders, co-founders, startups, investors, communities, technology, government grants, and new opportunities.</p><a class="button primary" href="#programs" data-close-about>Explore the programs</a></dialog>
 </body>
 </html>
-
-
-
